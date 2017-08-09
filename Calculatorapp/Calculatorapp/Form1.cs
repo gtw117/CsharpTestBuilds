@@ -54,6 +54,15 @@ namespace Calculatorapp
 
         }
 
+        private void button12_Click(object sender, EventArgs e)
+        {
+            switch (operation)
+            {
+                case "+":
+                    result.Text = (value + Double.Parse(result.text)).ToString();
+                    break;
 
+            }//end switch
+        }
     }
 }
