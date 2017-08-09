@@ -31,7 +31,7 @@ namespace Calculatorapp
         
         private void button_Click(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if ((result.Text == "0")||(operation_pressed))
                 result.Clear();
 
             Button b = (Button)sender;
