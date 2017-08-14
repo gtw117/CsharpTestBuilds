@@ -61,8 +61,19 @@ namespace Calculatorapp
                 case "+":
                     result.Text = (value + Double.Parse(result.Text)).ToString();
                     break;
-
+                case "-":
+                    result.Text = (value - Double.Parse(result.Text)).ToString();
+                    break;
+                case "*":
+                    result.Text = (value * Double.Parse(result.Text)).ToString();
+                    break;
+                case "/":
+                    result.Text = (value / Double.Parse(result.Text)).ToString();
+                    break;
+                default:
+                    break;
             }//end switch
+            operation_pressed = false;
         }
     }
 }
