@@ -59,7 +59,7 @@ namespace Calculatorapp
             switch (operation)
             {
                 case "+":
-                    result.Text = (value + Double.Parse(result.text)).ToString();
+                    result.Text = (value + Double.Parse(result.Text)).ToString();
                     break;
 
             }//end switch
