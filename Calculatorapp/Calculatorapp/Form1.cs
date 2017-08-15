@@ -33,7 +33,7 @@ namespace Calculatorapp
         {
             if ((result.Text == "0")||(operation_pressed))
                 result.Clear();
-
+            operation_pressed = false;
             Button b = (Button)sender;
             result.Text = result.Text + b.Text;
         }
@@ -53,6 +53,7 @@ namespace Calculatorapp
             operation_pressed = true;
             equation.Text = value + " " + operation;
         }
+
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -75,18 +76,22 @@ namespace Calculatorapp
                 default:
                     break;
             }//end switch
-            operation_pressed = false;
+
         }
+
 
         private void button17_Click(object sender, EventArgs e)
         {
-            result.Clear();
+            result.Text = "0";
             value = 0;
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

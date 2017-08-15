@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 326);
+            this.ClientSize = new System.Drawing.Size(295, 326);
             this.Controls.Add(this.equation);
             this.Controls.Add(this.result);
             this.Controls.Add(this.button18);
@@ -297,6 +297,8 @@
             this.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(311, 365);
+            this.MinimumSize = new System.Drawing.Size(311, 365);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
