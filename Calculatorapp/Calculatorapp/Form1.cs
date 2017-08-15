@@ -51,11 +51,13 @@ namespace Calculatorapp
             operation = b.Text;
             value = Double.Parse(result.Text);
             operation_pressed = true;
-
+            equation.Text = value + " " + operation;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            equation.Text = " ";
+
             switch (operation)
             {
                 case "+":
@@ -74,6 +76,17 @@ namespace Calculatorapp
                     break;
             }//end switch
             operation_pressed = false;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            result.Clear();
+            value = 0;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
