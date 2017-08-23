@@ -35,6 +35,14 @@ namespace Calculatorapp
                 result.Clear();
             operation_pressed = false;
             Button b = (Button)sender;
+
+            if (b.Text == ".")
+            {
+                if (!result.Text.Contains("."))
+                    result.Text = result.Text + b.Text;
+            }
+            else
+
             result.Text = result.Text + b.Text;
         }
 
@@ -48,11 +56,24 @@ namespace Calculatorapp
         private void operator_click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            operation = b.Text;
-            value = Double.Parse(result.Text);
-            operation_pressed = true;
-            equation.Text = value + " " + operation;
+
+            if (value != 0)
+            {
+                button12.PerformClick();
+                operation_pressed = true;
+                operation = b.Text;
+                equation.Text = value + "" + operation;
+
+            }
+            else
+            {
+                operation = b.Text;
+                value = Double.Parse(result.Text);
+                operation_pressed = true;
+                equation.Text = value + " " + operation;
+            }
         }
+
 
 
         private void button12_Click(object sender, EventArgs e)
@@ -76,6 +97,9 @@ namespace Calculatorapp
                 default:
                     break;
             }//end switch
+
+            value = Int32.Parse(result.Text);
+            operation = "";
 
         }
 
